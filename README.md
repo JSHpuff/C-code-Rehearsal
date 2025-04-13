@@ -104,3 +104,5 @@ Using Visual Studio Code be the coding IDE on Windows.
 
 ## Outline
 1. Print & Scan & Comment
+2. Variables & Data Types
+3. Calculate Samples
