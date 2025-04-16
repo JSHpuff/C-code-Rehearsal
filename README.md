@@ -106,3 +106,8 @@ Using Visual Studio Code be the coding IDE on Windows.
 1. Print & Scan & Comment
 2. Variables & Data Types
 3. Calculate Samples
+4. Structure
+5. Condition Statement
+6. Simple Functions
+7. Files
+8. Pointer
