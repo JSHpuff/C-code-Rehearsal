@@ -17,6 +17,11 @@ struct struct_sample_3{
     float gpa;
 };
 
+struct struct_sample_4 {
+    double salary;
+    int age;
+};
+
 int main() {
     /* ------------------------------------------------------ */
     /* ====================== Sample 1 ====================== */
@@ -61,6 +66,17 @@ int main() {
         printf("%-12s\t", students[i].name);
         printf("%.2f\n", students[i].gpa);
     }
+
+    /* ------------------------------------------------------ */
+    /* ====================== Sample 4 ====================== */
+    /* ------------------------------------------------------ */
+    struct struct_sample_4 person1 = {.age = 25, .salary = 4321.33};
+    struct struct_sample_4 person2 = {.age = 30, .salary = 5432.11};
+
+    printf("Age of person1: %d\n", person1.age);
+    printf("Salary of person1: %.2lf", person1.salary);
+    printf("Age of person2: %d\n", person2.age);
+    printf("Salary of person2: %.2lf", person2.salary);
 
     return 0;
 }
