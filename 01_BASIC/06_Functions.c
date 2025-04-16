@@ -1,6 +1,18 @@
 #include <stdio.h>
 
-double function_2(double);
+/* Function prototype: 
+        Funciton declaration, w/o a body, before main()
+        Ensures that calls to a funciton are made with the correct arguments
+       Important notes:
+        Many C compiler do not check for parameter matching
+        Missing arguments will result in unexpected behavior
+        A function prototype causes the compiler to flag an error if arguments are missing
+       Advantages:
+        1. Easier to navigate a program
+        2. Help with debugging
+        3. Commonly used in header files
+*/
+double function_2(double);      // function prototype
 
 int function_1(int x){
     return x+3;
@@ -9,6 +21,10 @@ int function_1(int x){
 void function_3(char x[], int y){
     printf("\nHappy birthday Dear %s!", x);
     printf("\nYou are %d years old!", y);
+}
+
+void function_4(int *n) {
+    *n += 1;
 }
 
 int main(void) {
@@ -30,6 +46,13 @@ int main(void) {
     char name[] = "Bro";
     int age = 21;
     function_3(name, age);
+
+    /* ------------------------------------------------------ */
+    /* ===================== Function 4 ===================== */
+    /* ------------------------------------------------------ */
+    int a = 3;
+    function_4(&a);
+    printf("%d", a);
 
     return 0;
 }
