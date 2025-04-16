@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+int If_function(int x, int y){
+    return (x > y) ? x : y;
+}
+
 int main() {
     /* ------------------------------------------------------ */
     /* ======================= Switch ======================= */
@@ -59,6 +63,15 @@ int main() {
        side2 *side2 + side3 *side3 == side1 *side1) {
         printf("Rectangular triangle\n");
     }
+
+    /* ------------------------------------------------------ */
+    /* ========================= If ========================= */
+    /* ------------------------------------------------------ */
+    /* Ternary operater = shortcut to if/else when assigning/returning a value
+       (Condition) ? value if true: value if false
+    */
+    int max = If_function(3, 4);
+    printf("%d", max);
 
     /* ------------------------------------------------------ */
     /* ======================= While ======================== */
