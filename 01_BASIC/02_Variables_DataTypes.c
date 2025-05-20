@@ -137,8 +137,8 @@ int main() {
     C[1] = '0';
     C[2] = 'H';
     C[3] = 'N';
-    C[4] = '\0' //--> Null character
-    printf("%s", C);
+    C[4] = '\0'; //--> Null character
+    printf("%s\n", C);
 
     return 0;
 }
