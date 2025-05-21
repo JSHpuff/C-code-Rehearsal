@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 void Pointer_Function_1(int a){     // Local variable
     a = a+1;
@@ -14,6 +15,14 @@ void Pointer_Function_Array_1(int* A, int size){
     for(i = 0; i<size; i++){
         A[i] = 2*A[i];
     }
+}
+
+void Pointer_Function_Char_1(char* A){
+    while(*A != '\0'){
+        printf("%c",*A);
+        A++;
+    }
+    printf("\n");
 }
 
 int main(void){
@@ -108,6 +117,12 @@ int main(void){
     for(i = 0; i< size; i++){
         printf("%d ", A[i]);
     }
+
+    /* ------------------------------------------------------ */
+    /* ============ Pointer Character Function ============== */
+    /* ------------------------------------------------------ */
+    char A[20] = "Hello";
+    print(A);
 
     return 0;
 }
