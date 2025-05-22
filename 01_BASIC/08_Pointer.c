@@ -121,7 +121,8 @@ int main(void){
     /* ------------------------------------------------------ */
     /* ============ Pointer Character Function ============== */
     /* ------------------------------------------------------ */
-    char A[20] = "Hello";
+    char A[20] = "Hello";   // string gets stored in the space for array
+    char *A = "Hello";      // string gets stored as compile time constant
     print(A);
 
     return 0;
