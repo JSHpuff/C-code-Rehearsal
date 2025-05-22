@@ -119,11 +119,31 @@ int main(void){
     }
 
     /* ------------------------------------------------------ */
+    /* ============== Pointer Array Function ================ */
+    /* ------------------------------------------------------ */
+    int A[5] = {2, 4, 6, 8, 10};
+    int *p = A;
+    // print A -- A[0]'s address. ex: 200
+    // print *A -- 2
+    // *(A+i) is same as A[i]
+    // (A+i) is same as &A[i]
+
+    /* ------------------------------------------------------ */
     /* ============ Pointer Character Function ============== */
     /* ------------------------------------------------------ */
     char A[20] = "Hello";   // string gets stored in the space for array
     char *A = "Hello";      // string gets stored as compile time constant
     print(A);
+
+    /* ------------------------------------------------------ */
+    /* ======== Pointer & Multi-dimensional arrays ========== */
+    /* ------------------------------------------------------ */
+    int B[2][3];
+    int (*A)[3] = B; // B[0] -> 1-D arrays of 3 integers
+    // print B+1 -> &B[1]
+    // print *(B+1) -> B[1] -> &B[1][0]
+    // print *(B+1)+2 -> B[1]+2 -> &B[1][2]
+    // B[i][j] = *(B[i]+j) = *(*(B+i) + j)
 
     return 0;
 }
