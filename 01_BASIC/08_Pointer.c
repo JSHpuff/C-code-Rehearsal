@@ -25,6 +25,11 @@ void Pointer_Function_Char_1(char* A){
     printf("\n");
 }
 
+int* Pointer_Function_Return(int* a, int* b){
+    int c = (*a) + (*b);
+    return &c;
+}
+
 int main(void){
     /* ------------------------------------------------------ */
     /* ===================== Pointer 1 ====================== */
@@ -144,6 +149,13 @@ int main(void){
     // print *(B+1) -> B[1] -> &B[1][0]
     // print *(B+1)+2 -> B[1]+2 -> &B[1][2]
     // B[i][j] = *(B[i]+j) = *(*(B+i) + j)
+
+    /* ------------------------------------------------------ */
+    /* ============ Pointer as Function return ============== */
+    /* ------------------------------------------------------ */
+    int x = 2, y = 4;
+    int* z = Add(&x, &y);
+    print("Sum = %d\n", *z);
 
     return 0;
 }
