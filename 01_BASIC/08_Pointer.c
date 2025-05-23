@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 void Pointer_Function_1(int a){     // Local variable
     a = a+1;
@@ -26,8 +27,9 @@ void Pointer_Function_Char_1(char* A){
 }
 
 int* Pointer_Function_Return(int* a, int* b){
-    int c = (*a) + (*b);
-    return &c;
+    int* c = (int*)malloc(sizeof(int));
+    *c = (*a) + (*b);
+    return c;
 }
 
 int main(void){
