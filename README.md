@@ -102,7 +102,7 @@ Using Visual Studio Code be the coding IDE on Windows.
     gdb --version
     </code></pre>
 
-## Outline
+## Basic Outline
 1. Print & Scan & Comment
 2. Variables & Data Types
 3. Calculate Samples
@@ -111,3 +111,10 @@ Using Visual Studio Code be the coding IDE on Windows.
 6. Simple Functions
 7. Files
 8. Pointer
+9. Pre-Processor
+10. Error
+11. Recursion
+12. Changable Variable
+
+## Library Outline
+1. stdlib
