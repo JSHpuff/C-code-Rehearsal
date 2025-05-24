@@ -8,6 +8,8 @@
 #include <stdbool.h>
 #include <string.h>
 
+#define LEN_ARRAY(array) (sizeof(array)/ sizeof(array[0]))
+
 int main() {
     /* --------------------------------------------------------- */
     /* ======================= Variables ======================= */
@@ -145,6 +147,15 @@ int main() {
     /* -------------------------------------------------------- */
     printf("int size: %lu\n",sizeof(int));
     printf("float size: %lu\n", sizeof(float));
+
+    /* -------------------------------------------------------- */
+    /* ==================== Length of Array =================== */
+    /* -------------------------------------------------------- */
+    int array[] = {1, 2, 3, 4 ,5};
+    int length_1 = sizeof(array) / sizeof(array[0]);
+    int length_2 = LEN_ARRAY(array);
+    printf("The length of array: %d\n", length_1);
+    printf("The length of array: %d\n", length_2);
 
     return 0;
 }
