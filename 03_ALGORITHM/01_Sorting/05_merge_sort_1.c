@@ -35,6 +35,9 @@ void merge_sort(int arr[], int len) {
         exit(EXIT_FAILURE);
     }
 
+    /** This loop controls the size of the subarrays being merged
+     * 1 -> 2 -> 4 -> 8 -> ...
+     */
     for (int seg = 1; seg < len; seg += seg) {
         for (int start = 0; start < len; start += seg + seg) {
             int low = start;
@@ -62,9 +65,8 @@ void merge_sort(int arr[], int len) {
 
     if (a != arr) {
         for (int i = 0; i < len; i++) {
-            b[i] = a[i];
+            arr[i] = a[i];
         }
-        b = a;
     }
 
     free(b);
