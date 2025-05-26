@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <stdio.h>      /** For printf */
+#include <stdlib.h>     /** For malloc, free, exit */
+#include <string.h>     /** For memcpy - fast memory copying */
 
 void merge_sort_recursive(int arr[], int reg[], int start, int end);
 void merge_sort(int arr[], const int len);
@@ -41,6 +41,9 @@ void merge_sort_recursive(int arr[], int reg[], int start, int end) {
         reg[k++] = arr[start2++];
     }
 
+    /** Copy merged result back to arr
+     * memcpy is faster than a loop.
+     */
     memcpy(arr + start, reg + start, (end - start + 1) * sizeof(int));
 }
 
