@@ -9,7 +9,7 @@ void main(void) {
 
     printf("Please input 2 positive integers: ");
     if (scanf("%d %d", &a, &b) != 2 || a <= 0 || b <= 0) {
-        printf("Invalid input. Please input 2 positive integers.");
+        printf("Invalid input. Please input 2 positive integers.\n");
         return 1;
     }
 
