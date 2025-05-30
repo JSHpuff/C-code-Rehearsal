@@ -11,19 +11,19 @@ int main(void) {
         index++;
     }
 
-    for (loop = 0; loop < o_len; loop++) {
+    for (int loop = 0; loop < o_len; loop++) {
         array[index] = odd[loop];
         index++;
     }
 
     printf("\nEven -> ");
-    for (loop = 0; loop < e_len; loop++) printf(" %d", even[loop]);
+    for (int loop = 0; loop < e_len; loop++) printf(" %d", even[loop]);
 
     printf("\nOdd -> ");
-    for (loop = 0; loop < o_len; loop++) printf(" %d", odd[loop]);
+    for (int loop = 0; loop < o_len; loop++) printf(" %d", odd[loop]);
 
     printf("\nMerge Array -> ");
-    for (loop = 0; loop < 10; loop++) printf(" %d", array[loop]);
+    for (int loop = 0; loop < 10; loop++) printf(" %d", array[loop]);
 
     return 0;
 }
