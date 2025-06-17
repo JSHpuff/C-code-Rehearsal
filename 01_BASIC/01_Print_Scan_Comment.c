@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define NAME_LEN 25
+
 int main(){
     /* --------------------------------------------------------- */
     /* ======================== Comment ======================== */
@@ -42,7 +44,7 @@ int main(){
     scanf("%[^\n]%*c", s);
     printf("Hello, World!\n%s", s);
 
-    char name[25];
+    char name[NAME_LEN];
     int age;
     int ch;
 
