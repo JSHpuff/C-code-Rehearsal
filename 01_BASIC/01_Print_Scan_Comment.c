@@ -44,6 +44,7 @@ int main(){
 
     char name[25];
     int age;
+    int ch;
 
     printf("\nWhat's your name?");
     
@@ -58,13 +59,27 @@ int main(){
         Unlike scanf("%s"), 
         fgets() captures spaces and the newline character.
     */
-    fgets(name, 25, stdin);
+    // fgets(name, 25, stdin);
+
 
     /*
         This replaces the newline character that 
         fgets() includes at the end with a null terminator
     */
-    name[strlen(name) - 1] = "\0";
+    // name[strlen(name) - 1] = '\0';
+
+    /**Better Codes */
+    if (fgets(name, sizeof(name), stdin) != NULL) {
+        size_t len = strlen(name);
+        if (len > 0 && name[len - 1] == '\n') {
+            name[len - 1] == '\0';
+        } else {
+            while ((ch = getchar()) != '\n' && ch != EOF);
+        }
+    } else {
+        fprintf(stderr, "Error reading name.\n");
+        return 1;
+    }
 
     printf("How old are you?");
 
@@ -76,7 +91,22 @@ int main(){
         The & operator gets the memory address (pointer),
         which tells scanf() where to write the data.
     */
-    scanf("%d", &age);
+    // scanf("%d", &age);
+
+    /**Better Codes */
+    /**
+     * Adding a space before %d tells scanf to skip all leading whitespace, 
+     * including newlines.
+     * This can make the manual buffer flush unnecessary 
+     * if your input flow is controlled.
+     */
+    if (scanf(" %d", &age) != 1) {
+        fprintf(stderr, "Invalid input for age.\n");
+        return 1;
+    }
+
+    /* Clear stdin in case of extra characters after the number */
+    while ((ch = getchar()) != '\n' && ch != EOF);
 
     printf("\nHello %s, how are you?", name);
     printf("\nYou are %d years old.", age);
