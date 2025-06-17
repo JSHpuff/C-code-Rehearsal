@@ -45,8 +45,7 @@ int main(){
     printf("Hello, World!\n%s", s);
 
     char name[NAME_LEN];
-    int age;
-    int ch;
+    int age, ch;
 
     printf("\nWhat's your name?");
     
@@ -83,7 +82,7 @@ int main(){
         return 1;
     }
 
-    printf("How old are you?");
+    printf("\nHow old are you?");
 
     /*  scanf()
         when using to read a vlaue into a primitive data type
