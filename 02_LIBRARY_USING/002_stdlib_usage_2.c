@@ -8,7 +8,9 @@
 
 int main(void) {
     // srand(time(NULL));
-    /** Better Codes */
+    /** Better Codes
+     *  create a random seed
+     */
     srand((unsigned int)time(NULL));
 
     // for (int i = 0; i < 10; i++) {
