@@ -29,7 +29,7 @@ int main(void) {
      *  - print a single character
      *  - the speed is faster than printf
      */
-    putchar("\n");
+    putchar('\n');
 
     return 0;
 }
