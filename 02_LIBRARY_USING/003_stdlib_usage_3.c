@@ -6,8 +6,8 @@
 int main() {
     const char *str = "12345";
     char *endptr;
-    errno = 0;
 
+    errno = 0;
     long val = strtol(str, &endptr, 10);
     
     if (errno == ERANGE || val > INT_MAX || val < INT_MIN) {
@@ -15,7 +15,7 @@ int main() {
         return EXIT_FAILURE;
     }
 
-    if (*endptr != '\0') {
+    if (*endptr) {
         fprintf(stderr, "Invalid characters found: '%s'\n", endptr);
         return EXIT_FAILURE;
     }
