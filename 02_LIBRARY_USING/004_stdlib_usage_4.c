@@ -2,7 +2,13 @@
 #include <stdlib.h>
 
 int compare(const void *a, const void *b) {
-    return (*(int*)a - *(int*)b);
+    // return (*(int*)a - *(int*)b);
+    // Better Safe
+    int a_val = *(int*)a;
+    int b_val = *(int*)b;
+    if (a_val < b_val) return -1;
+    else if (a_val > b_val) return 1;
+    else return 0;
 }
 
 int main() {
